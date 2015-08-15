@@ -100,3 +100,13 @@ fun update([],i,y) = raise SUBSCRIPT
 update(List.cons(1,List.cons(2,List.cons(3,List.empty))),1,4);
 
 (* val it = [1,4,3] : int list *)
+
+(* Exercise 2.1 *)
+
+fun suffixes [] = [[]]
+  | suffixes x = x :: suffixes (tl x);
+
+suffixes [1,2,3,4];
+
+(* val it = [[1,2,3,4],[2,3,4],[3,4],[4],[]] : int list list *)
+
